@@ -10,7 +10,7 @@ $alert-5: #97e411;
 $alert-6: #7bc200;
 $alert-7: #558502;
 $alert-8: "\f00c";
-$alert-9: #fd7761;
+$alert-9: #FEB1A4;
 $alert-10: #f55c43;
 $alert-11: #d52e13;
 $alert-12: "\f00d";
@@ -22,126 +22,197 @@ $alert-17: #a39cdc;
 $alert-18: #8781bd;
 $alert-19: #5b568e;
 $alert-20: "\f129";
+$alert-21: #AACDF6;
+$alert-22: #B18009;
 
 
+/* Classes for background change
+.color-yellow
+.color-green
+.color-red
+.color-blue
+.color-purple
+*/
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Lato";
-}
-
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-main {
-  width: 1171px;
-  // The two line checks for pixel perfect, TODO: remove this.
-  margin-left: 50px;
-  margin-bottom: 50px;
-  margin-top: 95px;
-}
-
-// Hierarchy of the container
-.container {
-  display: grid;
-  grid-row-gap: 30px;
-  grid-column-gap: 30px;
-  // This makes the latest div bigger than others.
-  section:last-child {
-    grid-column: 1/3;
-  }
-
-  .row {
-    position: relative;
-    border: solid $color-1 1px;
-    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: "Lato";
-    width: 570px;
-    height: 150px;
-
-    div {
-      font-size: 14px;
-      padding-right: 70px;
-      margin-top: 39px;
-
-        h2 {
-        color: $color-2;
-        font-weight: 900;
-        font-size: 14px;
-        letter-spacing: 1.1px;
-        word-spacing: 2.3px;
-        text-transform: uppercase;
-        }
-
-        p {
-        color: $color-3;
-        margin-top: 11px;
-        line-height: 24px;
-        }
-    }
-
-    &::before {
-      display: flex;
-      float: left;
-      content: $alert-4;
-      width: 50px;
-      height: 50px;
-      color: $alert-3;
-      font-family: FontAwesome;
-      font-weight: 900;
-      font-size: 24px;
-      margin: 50px 43px 28px 50px;
-      background-color: $alert-1;
-      border: solid $alert-2 7px;
-      border-radius: 50%;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &.success::before {
-      content: $alert-8;
-      background-color: $alert-5;
-      border: solid $alert-6 7px;
-      color: $alert-7;
-    }
-
-    &.error::before {
-      content: $alert-12;
-      background-color: $alert-9;
-      border: solid $alert-10 7px;
-      color: $alert-11;
-    }
-
-    &.unknown::before {
-      content: $alert-16;
-      background-color: $alert-13;
-      border: solid $alert-14 7px;
-      color: $alert-15;
-    }
-
-    &.alert-1.longer::before {
-      content: $alert-20;
-      background-color: $alert-17;
-      border: solid $alert-18 7px;
-      color: $alert-19;
-    }
-
-    a {
-      position: absolute;
-      text-decoration: none;
-      color: $color-4;
-      top: 14px;
-      right: 17px;
-    }
-
-    &.longer {
-      width: 100%;
-      padding-right: 0px;
-    }
-
   }
-}
+  
+  body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  main {
+    width: 1171px;
+    // The two line checks for pixel perfect, TODO: remove this.
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-top: 95px;
+  }
+  
+  // Hierarchy of the container
+  .container {
+    display: grid;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    // This makes the latest div bigger than others.
+    section:last-child {
+      grid-column: 1/3;
+    }
+  
+    .row {
+      position: relative;
+      border: solid $color-1 1px;
+      border-radius: 10px;
+      font-family: "Lato";
+      width: 570px;
+      height: 150px;
+  
+      &.color-yellow {
+        background-color: $alert-1;
+  
+        p {
+          color: black;
+        }
+        a {
+          color: $alert-22;
+          font-weight: 900;
+        }
+      }
+  
+      &.color-green {
+        background-color: $alert-5;
+  
+        p {
+          color: black;
+        }
+        a {
+          color: $alert-6;
+          font-weight: 900;
+        }
+      }
+  
+      &.color-red {
+        background-color: $alert-9;
+  
+        p {
+          color: black;
+        }
+  
+        a {
+          color: $alert-10;
+          font-weight: 900;
+        }
+      }
+  
+      &.color-blue {
+        background-color: $alert-13;
+  
+        p {
+          color: black;
+        }
+        a {
+          color: $alert-14;
+          font-weight: 900;
+        }
+      }
+  
+      &.color-purple {
+        background-color: $alert-21;
+  
+        p {
+          color: black;
+        }
+  
+        a {
+          color: $alert-18;
+          font-weight: 900;
+        }
+      }
+  
+      div {
+        font-size: 14px;
+        padding-right: 70px;
+        margin-top: 39px;
+  
+        h2 {
+          color: $color-2;
+          font-weight: 900;
+          font-size: 14px;
+          letter-spacing: 1.1px;
+          word-spacing: 2.3px;
+          text-transform: uppercase;
+        }
+  
+        p {
+          color: $color-3;
+          margin-top: 11px;
+          line-height: 24px;
+        }
+      }
+  
+      &::before {
+        display: flex;
+        float: left;
+        content: $alert-4;
+        width: 50px;
+        height: 50px;
+        color: $alert-3;
+        font-family: FontAwesome;
+        font-weight: 900;
+        font-size: 24px;
+        margin: 50px 43px 28px 50px;
+        background-color: $alert-1;
+        border: solid $alert-2 7px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      &.success::before {
+        content: $alert-8;
+        background-color: $alert-5;
+        border: solid $alert-6 7px;
+        color: $alert-7;
+      }
+  
+      &.error::before {
+        content: $alert-12;
+        background-color: $alert-9;
+        border: solid $alert-10 7px;
+        color: $alert-11;
+      }
+  
+      &.unknown::before {
+        content: $alert-16;
+        background-color: $alert-13;
+        border: solid $alert-14 7px;
+        color: $alert-15;
+      }
+  
+      &.alert-1.longer::before {
+        content: $alert-20;
+        background-color: $alert-21;
+        border: solid $alert-18 7px;
+        color: $alert-19;
+      }
+  
+      a {
+        position: absolute;
+        text-decoration: none;
+        color: $color-4;
+        top: 14px;
+        right: 17px;
+        font-weight: bold;
+      }
+  
+      &.longer {
+        width: 100%;
+        padding-right: 0px;
+      }
+    }
+  }
